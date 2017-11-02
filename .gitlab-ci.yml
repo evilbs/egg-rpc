@@ -1,0 +1,12 @@
+# 不要修改该文件, 会自动生成, 详见 http://gitlab.alibaba-inc.com/node/ci
+before_script:
+  - echo $PATH
+  - time enclose install tnpm
+  - tnpm -v
+node-4:
+  image: reg.docker.alibaba-inc.com/dockerlab/node-ci:1.0.0
+  script:
+    - time tnpm i --install-node=4 --no-cache
+    - time tnpm run ci
+  tags:
+    - swarm

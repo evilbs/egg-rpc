@@ -1,0 +1,39 @@
+{
+  "name": "egg-rpc",
+  "version": "1.4.0",
+  "description": "egg rpc server.",
+  "main": "index.js",
+  "eggPlugin": {
+    "name": "eggrpc"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint lib app config test app.js agent.js",
+    "ci": "egg-bin autod --check && egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "autod": "egg-bin autod",
+    "pkgfiles": "egg-bin pkgfiles",
+    "contributors": "ali-contributors"
+  },
+  "devDependencies": {
+    "egg-bin": "^2.3.0",
+    "@ali/mm": "^6.1.1",   
+    "eslint": "^4.3.0",
+    "eslint-config-egg": "^5.0.0",
+    "supertest": "^3.0.0"
+  },
+  "keywords": [
+    "egg",
+    "plugin",
+    "egg-plugin",
+    "eggPlugin",
+    "rpc",
+    "eggRpc"
+  ],
+  "author": "guoyong.ygy",
+  "license": "ISC",
+  "dependencies": {
+    "is-type-of": "^1.2.0"
+  }
+}
